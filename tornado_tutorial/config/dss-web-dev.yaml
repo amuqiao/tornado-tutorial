@@ -1,0 +1,39 @@
+app_config:
+    log_level: 10
+
+session_server:
+    driver: redis
+    driver_settings:
+        host: localhost
+        port: 6379
+        password: 
+        db: 1
+        max_connections: 512
+
+cache_server:
+    driver: redis
+    driver_settings:
+        REDIS_HOST: localhost
+        REDIS_PORT: 6379
+        REDIS_PASSWORD: 
+        REDIS_DB: 2
+        REDIS_EX: 172800 
+        REDIS_MAX_CONNECTIONS: 512
+
+database:
+    host: 
+    port: 3306
+    user: 
+    password: 
+    database: 
+    charset: utf8
+
+captcha_fonts:
+    - fonts/RedHatDisplay-Regular.ttf
+    - fonts/RedHatDisplay-Medium.ttf
+    - fonts/RedHatDisplay-Black.ttf
+    - fonts/RedHatDisplay-Bold.ttf
+
+crypto_rsa:
+    public_key_file: keys/rsa_pub_key.pem
+    private_key_file: keys/rsa_pri_key.pem
